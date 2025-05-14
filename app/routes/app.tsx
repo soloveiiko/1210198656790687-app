@@ -26,13 +26,13 @@ export default function App() {
         </Link>
         <Link to="/app/products">Task 3</Link>
         <Link to="/app">Task 1</Link>
-        <Link to="/app/table">Task 2</Link>
       </NavMenu>
       <Outlet />
     </AppProvider>
   );
 }
 
+// Shopify needs Remix to catch some thrown responses, so that their headers are included in the response.
 export function ErrorBoundary() {
   return boundary.error(useRouteError());
 }

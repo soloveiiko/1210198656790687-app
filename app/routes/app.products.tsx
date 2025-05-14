@@ -7,10 +7,10 @@ import {
   Thumbnail,
 } from "@shopify/polaris";
 import { useLoaderData, useNavigate } from "@remix-run/react";
-import { authenticate } from "../shopify.server";
-import { getProductsQuery } from "../graphql/products/getProductsQuery";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { ImageIcon } from "@shopify/polaris-icons";
+import { authenticate } from "~/shopify.server";
+import { getProductsQuery } from "~/graphql/products/getProductsQuery";
 
 export async function loader({ request }: { request: Request }) {
   const url = new URL(request.url);
