@@ -3,7 +3,7 @@
 client_id = "8ea36b968febe39ff39e146460dd9d3e"
 name = "1210198656790687-app"
 handle = "1210198656790687-app-1"
-application_url = "https://4c25-195-114-157-73.ngrok-free.app"
+application_url = "https://1722-185-208-228-62.ngrok-free.app"
 embedded = true
 
 [build]
@@ -27,9 +27,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://4c25-195-114-157-73.ngrok-free.app/auth/callback",
-  "https://4c25-195-114-157-73.ngrok-free.app/auth/shopify/callback",
-  "https://4c25-195-114-157-73.ngrok-free.app/api/auth/callback"
+  "https://1722-185-208-228-62.ngrok-free.app/auth/callback",
+  "https://1722-185-208-228-62.ngrok-free.app/auth/shopify/callback",
+  "https://1722-185-208-228-62.ngrok-free.app/api/auth/callback"
 ]
 
 [pos]
