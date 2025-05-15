@@ -1,19 +1,47 @@
 export const getProductsQuery = `
-  query {
-    products(first: 250) {
+  query (
+    $first: Int,
+    $after: String,
+    $last: Int,
+    $before: String,
+    $sortKey: ProductSortKeys
+    $reverse: Boolean
+  ) {
+    products(
+      first: $first,
+      after: $after,
+      last: $last,
+      before: $before
+      sortKey: $sortKey
+      reverse: $reverse
+    ) {
+      pageInfo {
+        hasPreviousPage
+        hasNextPage
+        startCursor
+        endCursor
+      }
       edges {
+        cursor
         node {
           id
           title
-          description
-          variants(first: 1) {
-            edges {
-              node {
-                id
-                price
-                sku
-                inventoryQuantity
+          media(first: 1) {
+            nodes {
+              preview {
+                image {
+                  id
+                  altText
+                  url
+                }
               }
+            }
+          }
+          variants(first: 1) {
+            nodes {
+              id
+              price
+              inventoryQuantity
             }
           }
         }
