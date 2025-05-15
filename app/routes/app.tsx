@@ -24,8 +24,9 @@ export default function App() {
         <Link to="/app" rel="home">
           Home
         </Link>
-        <Link to="/app/products">Task 3</Link>
         <Link to="/app">Task 1</Link>
+        <Link to="/app/products">Task 3</Link>
+        <Link to="/app/orders">Prisma</Link>
       </NavMenu>
       <Outlet />
     </AppProvider>
