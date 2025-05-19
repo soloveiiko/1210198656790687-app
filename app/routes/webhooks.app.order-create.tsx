@@ -5,7 +5,6 @@ import type { ActionFunctionArgs } from "@remix-run/node";
 export const action = async ({ request }: ActionFunctionArgs) => {
   try {
     const { payload } = await authenticate.webhook(request);
-    console.log("Received webhook payload:", payload);
 
     const { name, created_at, total_price, financial_status } = payload;
 
