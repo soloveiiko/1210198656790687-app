@@ -9,7 +9,8 @@ export async function createRandomOrder() {
   const order = await prisma.order.create({
     data: {
       name: randomName,
-      totalAmount: randomAmount,
+      createdAt: new Date(),
+      totalPrice: randomAmount,
       status: randomStatus,
     },
   });
