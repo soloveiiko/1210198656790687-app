@@ -44,7 +44,6 @@ export async function loader({ request }: { request: Request }) {
 
     const products = parsedResponse.data.products.edges;
     const pageInfo = parsedResponse.data.products.pageInfo;
-    console.log("pageInfoo", pageInfo);
 
     const mappedProducts = products.map(({ node }: any) => {
       const variant = node.variants?.nodes[0] ?? {};
