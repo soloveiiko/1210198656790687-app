@@ -1,0 +1,21 @@
+<div id="productBlock">
+  <span id="productBlockText">{{ block.settings.simple_text }}</span>
+  <button id="productBlockSubmit">Submit</button>
+</div>
+
+<script src="{{ 'product_block.js' | asset_url }}" defer></script>
+
+{% schema %}
+{
+  "name": "Product Block",
+  "target": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "simple_text",
+      "label": "Simple text",
+      "default": "Hello World!"
+    }
+  ]
+}
+{% endschema %}

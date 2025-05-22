@@ -28,5 +28,10 @@ redirect_urls = [
   "https://sawfish-exact-urgently.ngrok-free.app/api/auth/callback"
 ]
 
+[[extensions]]
+type = "theme_app_extension"
+name = "Simple Extension"
+handle = "simple-extension"
+
 [pos]
 embedded = false
