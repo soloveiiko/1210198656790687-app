@@ -1,9 +1,10 @@
-<div id="productBlock">
-  <span id="productBlockText">{{ block.settings.simple_text }}</span>
-  <button id="productBlockSubmit">Submit</button>
-</div>
-
-<script src="{{ 'product_block.js' | asset_url }}" defer></script>
+<form method="post" action="/apps/proxy/api/send" id="productForm">
+  <label id="productFormLabel">
+    {{ block.settings.label }}
+    <input type="text" name="text">
+  </label>
+  <button id="productBlockSubmit">{{ block.settings.submit }}</button>
+</form>
 
 {% schema %}
 {
@@ -12,10 +13,17 @@
   "settings": [
     {
       "type": "text",
-      "id": "simple_text",
-      "label": "Simple text",
-      "default": "Hello World!"
+      "id": "label",
+      "label": "Label",
+      "default": "Please, enter something in this field"
+    },
+    {
+      "type": "text",
+      "id": "submit",
+      "label": "Submit Button Text",
+      "default": "Submit"
     }
-  ]
+  ],
+  "javascript": "product_block.js"
 }
 {% endschema %}
