@@ -1,0 +1,29 @@
+<form method="post" action="/apps/proxy/api/send" id="productForm">
+  <label id="productFormLabel">
+    {{ block.settings.label }}
+    <input type="text" name="text">
+  </label>
+  <button id="productBlockSubmit">{{ block.settings.submit }}</button>
+</form>
+
+{% schema %}
+{
+  "name": "Product Block",
+  "target": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Label",
+      "default": "Please, enter something in this field"
+    },
+    {
+      "type": "text",
+      "id": "submit",
+      "label": "Submit Button Text",
+      "default": "Submit"
+    }
+  ],
+  "javascript": "product_block.js"
+}
+{% endschema %}

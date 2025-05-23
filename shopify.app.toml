@@ -1,9 +1,9 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
-client_id = "8ea36b968febe39ff39e146460dd9d3e"
-name = "1210198656790687-app"
-handle = "1210198656790687-app-1"
-application_url = "https://667f-195-114-157-73.ngrok-free.app"
+client_id = "0ce710fcfac182397230dfcb64996f5f"
+name = "my-app"
+handle = "my-app-1693"
+application_url = "https://sawfish-exact-urgently.ngrok-free.app"
 embedded = true
 
 [build]
@@ -14,23 +14,24 @@ automatically_update_urls_on_dev = true
 api_version = "2025-04"
 
   [[webhooks.subscriptions]]
-  topics = [ "app/uninstalled" ]
-  uri = "/webhooks/app/uninstalled"
-
-  [[webhooks.subscriptions]]
-  topics = [ "app/scopes_update" ]
-  uri = "/webhooks/app/scopes_update"
+  topics = [ "orders/create" ]
+  uri = "/webhooks/app/order-create"
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = "write_products"
+scopes = "read_orders,write_products,write_app_proxy"
 
 [auth]
 redirect_urls = [
-  "https://667f-195-114-157-73.ngrok-free.app/auth/callback",
-  "https://667f-195-114-157-73.ngrok-free.app/auth/shopify/callback",
-  "https://667f-195-114-157-73.ngrok-free.app/api/auth/callback"
+  "https://sawfish-exact-urgently.ngrok-free.app/auth/callback",
+  "https://sawfish-exact-urgently.ngrok-free.app/auth/shopify/callback",
+  "https://sawfish-exact-urgently.ngrok-free.app/api/auth/callback"
 ]
+
+[[extensions]]
+type = "theme_app_extension"
+name = "Simple Extension"
+handle = "simple-extension"
 
 [pos]
 embedded = false
